@@ -72,13 +72,14 @@ section {
 
 
 section {
+  box-shadow: inset 0 35px 100px -5px rgba(0,0,0,0.08);
   width: 100vw; height: 100vh;
   position: relative;
 }
 
 
 #intro {
-  background-color: beige;
+  background-color: #f0f9a2e6;
 }
 
 #intro h1{
@@ -94,10 +95,10 @@ section {
 #greeting-container {
   z-index: 0;
   position: absolute; top: 50px; right: 50px;
-  mix-blend-mode:overlay;
 }
 
 .circle{
+  mix-blend-mode:overlay;
   top: 10%;
   position: absolute;
   border-radius: 100%; height: 15vw; width: 15vw;
@@ -105,29 +106,107 @@ section {
 
 #circle-1{
   left: 2%; top: 20%;
-  background-color: blue;
+  background-color: #b8b8d1;
 }
 
 #circle-2{
   left: 20%;
-  background-color: cyan;
+  background-color: #72b573;
 }
 
 #circle-3{
   left: 40%; top: 15%;
-  background-color: red;
+  background-color: #b1d785;
 }
 
 #circle-4{
   left: 60%; top: 20%;
-  background-color: purple;
+  background-color: #ff4f4f8c;
+}
+
+
+#second-greeting{
+  position: absolute; left: 10%; bottom: 15%;
+  width: 22%; height: auto;
 }
 
 #intro h2{
+  padding: 0; margin: 0;
+  z-index: 100;
   color: white;
-  position: absolute; left: 80px; bottom: 45px;
-  width: 22%;
   font-size: 5vw; text-align: left;
+}
+
+#circle-5{
+  display: absolute;
+  height: 25vw; width: 25vw;
+  left: 2%;
+  background-color: #969618;
+  mix-blend-mode: overlay;
+}
+
+/* About */
+
+#about{
+  background-color: #ebf4a2;
+}
+
+#me{
+  position: absolute; bottom: 50px; right: 35px;
+  border-radius: 100%;
+    filter: opacity(.6) brightness(150%) contrast(80%) saturate(200%);
+  mix-blend-mode: overlay;
+}
+
+#about h1 {
+  font-size: 8vw; color: white; padding: 0; margin: 0;
+}
+
+#about-greeting{
+  position: absolute; top: 80px; left: 45px; width: 30%;
+}
+
+#circle-6{
+  background-color: #c324c3; width: 25vw; height: 25vw; left: 15%;
+  top: -25%;
+}
+
+
+#about-blurb {
+  font-size: 1.3vw;
+  position: absolute;
+  top: 20%; width: 70%; height: 80%; left: 40%;
+}
+
+#about-blurb p{
+  padding: 10px;
+  color: white; position: absolute; width: 70%;
+  background-color: black;
+  mix-blend-mode:soft-light;
+}
+
+#about-blurb span{
+  mix-blend-mode:lighten;
+}
+
+#first-blurb{
+  text-align:left;
+  left: 0%; top: -10%;
+}
+
+#second-blurb{
+  text-align: right;
+  left: 5%; top: 10%;
+}
+
+#third-blurb{
+  text-align: left;
+  left: -15%; top: 37%;
+}
+
+#fourth-blurb{
+  text-align:right;
+  left: -45%; top: 65%;
 }
 
 

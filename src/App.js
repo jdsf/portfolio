@@ -81,13 +81,50 @@ class App extends Component {
               </div>
               <h1>  Hello,</h1>
             </div>
-
-            <h2> please enjoy your stay. </h2>
+            <div id = "second-greeting">
+              <div className = "circle" id = "circle-5">
+              </div>
+              <h2> please enjoy your stay. </h2>
+            </div>
           </section>
           <section id = "about">
             <article>
               <img id = "me" src= {headshot} alt ="Me!" />
-              <h1> About Me </h1>
+              <div id = "about-greeting">
+                <div className = "circle" id = "circle-6">
+                </div>
+                <h1> Acerca de </h1>
+              </div>
+              <div id = "about-blurb">
+                <p id = "first-blurb">
+                  <span>
+                  Greetings! My name is Jose, I'm a bioengineering graduate
+                  from Bolivia exploring the world of web development and design.
+                  </span>
+                </p>
+                <p id= "second-blurb">
+                  Here you'll be able to find some of the work I've produced
+                  during my trek. I've only been learning
+                  javascript for the past 6 months and React for the last 3 but
+                  I'm really looking forward to things I'll be able to do as
+                  I become more comfortable with the tools I have.
+                </p>
+                <p id = "third-blurb">
+                  Though I took some introductory OOP experience on java and
+                  have some practice with other statistical and engineering languages
+                  it really wasn't until delving a little into web development
+                  my last quarter of uni that my appreciation for learning
+                  about programming grew.
+                </p>
+                <p id = "fourth-blurb">
+                  To be sure I still have a ton to learn in the realm of web
+                  application, design, and programming, but I am encouraged by
+                  the fact that any solution one attempts can quickly
+                  and readily translate to something tangible and interactive just
+                  by virtue of the medium. To be so in control of how an idea
+                  manifests in both function and appearance is what draws me in.
+                </p>
+              </div>
             </article>
           </section>
           <section id = "first" id = "projects">
