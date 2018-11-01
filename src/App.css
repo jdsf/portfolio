@@ -152,7 +152,7 @@ section {
 }
 
 #me{
-  position: absolute; bottom: 50px; right: 35px;
+  position: absolute; bottom: -5%; right: -8%;
   border-radius: 100%;
     filter: opacity(.6) brightness(150%) contrast(80%) saturate(200%);
   mix-blend-mode: overlay;
@@ -189,6 +189,13 @@ section {
   mix-blend-mode:lighten;
 }
 
+strong.pop-out{
+  color: white;
+  background-color: purple; padding: 2px;
+  position: absolute; left: -5%; top: -38%;
+  font-size: 2vw;
+}
+
 #first-blurb{
   text-align:left;
   left: 0%; top: -10%;
@@ -196,17 +203,25 @@ section {
 
 #second-blurb{
   text-align: right;
-  left: 5%; top: 10%;
+  left: 5%; top: 8%;
 }
 
 #third-blurb{
   text-align: left;
-  left: -15%; top: 37%;
+  left: -15%; top: 32%;
+}
+
+#third-blurb strong.pop-out{
+  top: -13%;  background-color: blue;
+}
+
+#fourth-blurb strong.pop-out{
+  top: -20%; background-color: green;
 }
 
 #fourth-blurb{
   text-align:right;
-  left: -45%; top: 65%;
+  left: -45%; top: 70%;
 }
 
 

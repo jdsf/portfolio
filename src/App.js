@@ -98,31 +98,47 @@ class App extends Component {
               <div id = "about-blurb">
                 <p id = "first-blurb">
                   <span>
-                  Greetings! My name is Jose, I'm a bioengineering graduate
-                  from Bolivia exploring the world of web development and design.
+                  <strong className = "pop-out">
+                    Greetings!
+                  </strong> My name is Jose, I'm a bioengineering graduate
+                  from UW Seattle exploring the world of web development and design.
                   </span>
                 </p>
                 <p id= "second-blurb">
-                  Here you'll be able to find some of the work I've produced
-                  during my trek. I've only been learning
-                  javascript for the past 6 months and React for the last 3 but
-                  I'm really looking forward to things I'll be able to do as
-                  I become more comfortable with the tools I have.
+                  Here you'll be able to find some of the humble work I've produced
+                  during my trek. With all the different ways problems can be tackled
+                  I'd be hard pressed in saying I'm not still learning the ropes.
+                  All in all I've been dabbling in javascript a little over six
+                  months and react for close to three.
                 </p>
                 <p id = "third-blurb">
-                  Though I took some introductory OOP experience on java and
-                  have some practice with other statistical and engineering languages
-                  it really wasn't until delving a little into web development
-                  my last quarter of uni that my appreciation for learning
-                  about programming grew.
+                  <strong className = "pop-out">
+                    Some background
+                  </strong>
+                    <span>
+                      I took some introductory OOP, statistical and engineering
+                      programming during school but I didn't really become personally
+                      invested in the things I produced until my last quarter of school
+                      when I took
+                      a web development class on a whim (we covered vanilla js, basic html
+                      CSS, JSON, AJAX, using APIs and serving content through PHP, as well as a little
+                      SQL). To be sure I still have a ton to learn about both front and
+                      back end but I am encouraged by what I've accomplished and the fact
+                      that the medium is so readily capable of making ideas tangible and
+                      interactive. To have so much control about so many aspects, from
+                      design to function to presentation is very satisfying.
+                    </span>
                 </p>
                 <p id = "fourth-blurb">
-                  To be sure I still have a ton to learn in the realm of web
-                  application, design, and programming, but I am encouraged by
-                  the fact that any solution one attempts can quickly
-                  and readily translate to something tangible and interactive just
-                  by virtue of the medium. To be so in control of how an idea
-                  manifests in both function and appearance is what draws me in.
+                  <strong className = "pop-out">
+                    Some facts
+                  </strong> I was born in Santa Cruz,
+                  Bolivia, a mid-sized landlocked country in the heart of South
+                  America home to ~10 million people. Personally I'm of the mindset
+                  that if people genuinely care about something
+                  then that thing has something to it, even if I don't particularly
+                  understand it at the moment. It's up to me to make up the difference
+                  and see things with the respect they deserve.
                 </p>
               </div>
             </article>
