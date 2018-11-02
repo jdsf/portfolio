@@ -149,6 +149,8 @@ section {
 
 #about{
   background-color: #ebf4a2;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 #me{
@@ -173,7 +175,7 @@ section {
 
 
 #about-blurb {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   position: absolute;
   top: 20%; width: 70%; height: 80%; left: 40%;
 }
@@ -192,7 +194,7 @@ section {
 strong.pop-out{
   color: white;
   background-color: purple; padding: 2px;
-  position: absolute; left: -5%; top: -38%;
+  position: absolute; left: -5%; top: -50%;
   font-size: 2vw;
 }
 
@@ -212,16 +214,65 @@ strong.pop-out{
 }
 
 #third-blurb strong.pop-out{
-  top: -13%;  background-color: blue;
+  top: -20%;  background-color: blue;
 }
 
 #fourth-blurb strong.pop-out{
-  top: -20%; background-color: green;
+  top: -25%; background-color: green;
 }
 
 #fourth-blurb{
   text-align:right;
   left: -45%; top: 70%;
+}
+
+/* Projects */
+
+#projects{
+  background-color: #aa3838;
+  overflow: hidden;
+}
+
+#projects-greeting{
+  position: absolute; top: 1%; right: 5%;
+}
+
+#projects-greeting h1{
+  color: white; font-size: 16vw;
+  margin: 0; padding: 0;
+}
+
+#projects-greeting div.circle{
+  left: 30%; top: -10%;
+  width: 25vw; height: 25vw; background-color: white;
+}
+
+#thumbnail-container{
+  padding: 1%;
+  position: absolute; width: 80%; height: 50%; background-color: white;
+  bottom: 8%; left: 10%; opacity: .8%;
+  display: flex; flex-direction: row; flex-wrap: wrap;
+  justify-content: space-between; align-content: space-between;
+}
+
+#thumbnail-container article{
+  margin: auto;
+  border: 1px inset black;
+  width: 49%; height: 49%;
+}
+
+#thumbnail-container div.screen{
+  opacity: .6; background-color: grey;
+  width: 48%; height: 47%;
+  position: absolute;
+}
+
+#thumbnail-container p {
+  text-align: center;
+  color: black;
+  position: absolute; padding: 2px; margin: 0;
+  width: 45%; height: 49%;
+  font-size: 1.2vw;
 }
 
 

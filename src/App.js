@@ -105,45 +105,114 @@ class App extends Component {
                   </span>
                 </p>
                 <p id= "second-blurb">
-                  Here you'll be able to find some of the humble work I've produced
+                  In this humble abode you'll find some of the work I've produced
                   during my trek. With all the different ways problems can be tackled
-                  I'd be hard pressed in saying I'm not still learning the ropes.
+                  I'd be hard pressed to say I'm not still learning the ropes.
                   All in all I've been dabbling in javascript a little over six
                   months and react for close to three.
                 </p>
                 <p id = "third-blurb">
-                  <strong className = "pop-out">
-                    Some background
-                  </strong>
                     <span>
+                      <strong className = "pop-out">
+                        Some background
+                      </strong>
                       I took some introductory OOP, statistical and engineering
                       programming during school but I didn't really become personally
                       invested in the things I produced until my last quarter of school
                       when I took
                       a web development class on a whim (we covered vanilla js, basic html
                       CSS, JSON, AJAX, using APIs and serving content through PHP, as well as a little
-                      SQL). To be sure I still have a ton to learn about both front and
-                      back end but I am encouraged by what I've accomplished and the fact
-                      that the medium is so readily capable of making ideas tangible and
-                      interactive. To have so much control about so many aspects, from
-                      design to function to presentation is very satisfying.
+                      SQL). I still have a ton to learn about both front and
+                      back end but I am encouraged by what I've accomplished so far.
+                      Stay tuned!
                     </span>
                 </p>
                 <p id = "fourth-blurb">
-                  <strong className = "pop-out">
-                    Some facts
-                  </strong> I was born in Santa Cruz,
-                  Bolivia, a mid-sized landlocked country in the heart of South
-                  America home to ~10 million people. Personally I'm of the mindset
-                  that if people genuinely care about something
-                  then that thing has something to it, even if I don't particularly
-                  understand it at the moment. It's up to me to make up the difference
-                  and see things with the respect they deserve.
+                  <span>
+                    <strong className = "pop-out">
+                      Miscellaneous
+                    </strong>
+                    I was born in Santa Cruz,
+                    Bolivia, a mid-sized landlocked country in the heart of South
+                    America home to ~10 million people. Personally I'm of the mindset
+                    that if folks genuinely care about something
+                    then that thing must have something to it, even if I don't particularly
+                    understand it at the moment. It's up to me to make up the difference
+                    and see things with the respect they deserve.
+                  </span>
                 </p>
               </div>
             </article>
           </section>
-          <section id = "first" id = "projects">
+          <section id = "projects">
+            <div id = "projects-greeting">
+              <div className = "circle">
+              </div>
+              <h1> Projects </h1>
+            </div>
+
+            <div id = "thumbnail-container">
+              <article id ="first">
+                <div className = "screen">
+                </div>
+                <img src = ""/>
+                <p>
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit
+                  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum."
+                </p>
+              </article>
+              <article id ="second">
+                <div className = "screen">
+                </div>
+                <img src = ""/>
+                <p>
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit
+                  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum."
+                </p>
+              </article>
+              <article id ="third">
+                <div className = "screen">
+                </div>
+                <img src = ""/>
+                <p>
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit
+                  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum."
+                </p>
+              </article>
+              <article id ="fourth">
+                <div className = "screen">
+                </div>
+                <img src = ""/>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Duis aute irure dolor in reprehenderit in voluptate velit
+                  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum.
+                </p>
+              </article>
+            </div>
           </section>
 
         </main>
