@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-
+import Carousel from './components/Carousel'
 
 
 import headshot from "./assets/stadfor.jpg"
+import zen from "./assets/zen.png"
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
 
-  state = ({
-    header: {hover: false}
-  });
+    this.state = ({
+      header: {hover: false}
+    });
+  }
+
+
 
   headerActive = () => {
     this.setState({
@@ -150,74 +156,9 @@ class App extends Component {
               </div>
               <h1> Projects </h1>
             </div>
-
-            <div id = "thumbnail-container">
-              <article id ="first">
-                <div className = "screen">
-                </div>
-                <img src = ""/>
-                <p>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit
-                  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia
-                  deserunt mollit anim id est laborum."
-                </p>
-              </article>
-              <article id ="second">
-                <div className = "screen">
-                </div>
-                <img src = ""/>
-                <p>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit
-                  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia
-                  deserunt mollit anim id est laborum."
-                </p>
-              </article>
-              <article id ="third">
-                <div className = "screen">
-                </div>
-                <img src = ""/>
-                <p>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit
-                  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia
-                  deserunt mollit anim id est laborum."
-                </p>
-              </article>
-              <article id ="fourth">
-                <div className = "screen">
-                </div>
-                <img src = ""/>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit
-                  esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia
-                  deserunt mollit anim id est laborum.
-                </p>
-              </article>
-            </div>
+            <Carousel/>
           </section>
-
         </main>
-
-
       </div>
     );
   }
