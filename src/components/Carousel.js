@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {TransitionGroup, CSSTransition } from 'react-transition-group';
 
 
 
@@ -16,8 +17,9 @@ class Carousel extends Component {
         "A simple zen-styled page made with vanilla js",
         "A light-weight daily notes/diary page"
       ],
-      count: 0,
-      hover: false
+      count: props.count,
+      hover: false,
+      transitioning: true
     });
   }
 
@@ -59,7 +61,17 @@ class Carousel extends Component {
     return (
       <div id = "thumbnail-container">
         <div id = "image-container">
-          <img src = {image} alt = {altString}/>
+          <TransitionGroup>
+            <CSSTransition
+              key = {this.state.count}
+              timeout = {300}
+              classNames = "image"
+            >
+              <img className = {"image-number-" + this.state.count}
+                   src = {image} alt = {altString}
+              />
+            </CSSTransition>
+          </TransitionGroup>
         </div>
         <a href = "#"
            style = {anchorStyle}
@@ -70,13 +82,20 @@ class Carousel extends Component {
           style = {screenStyle}
         >
         </div>
-        <p style = {blurbStyle}>
-          {blurb}
-        </p>
+        <CSSTransition>
+          <p style = {blurbStyle}>
+            {blurb}
+          </p>
+        </CSSTransition>
       </div>
     );
   }
 
+  componentWillReceiveProps(props) {
+    this.setState({
+      count: props.count
+    });
+  }
   render(){
     let carousel = this.buildThumb();
 

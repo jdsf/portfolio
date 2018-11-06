@@ -11,11 +11,32 @@ class App extends Component {
     super(props);
 
     this.state = ({
-      header: {hover: false}
+      header: {hover: false},
+      carouselTimer: 0
     });
   }
 
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.advanceCarousel(),
+      5000
+    );
+  }
 
+  advanceCarousel = () =>{
+    let current = this.state.carouselTimer;
+    let future;
+    if (current < 1){
+      future = current + 1;
+    } else {
+      future = 0;
+    }
+
+    console.log(this.state);
+    this.setState({
+      carouselTimer: future
+    });
+  }
 
   headerActive = () => {
     this.setState({
@@ -156,7 +177,7 @@ class App extends Component {
               </div>
               <h1> Projects </h1>
             </div>
-            <Carousel/>
+            <Carousel count = {this.state.carouselTimer}/>
           </section>
         </main>
       </div>
