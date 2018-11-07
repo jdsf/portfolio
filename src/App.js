@@ -26,7 +26,7 @@ class App extends Component {
   advanceCarousel = () =>{
     let current = this.state.carouselTimer;
     let future;
-    if (current < 1){
+    if (current < 2){
       future = current + 1;
     } else {
       future = 0;
@@ -53,11 +53,11 @@ class App extends Component {
 
   render() {
     const headerStyle = {
-      height : this.state.header.hover? "7%" : "3%"
+      height : this.state.header.hover? "3%" : "3%"
     }
 
     const logoStyle = {
-      fontSize : this.state.header.hover? "2.2vw" : "1.1vw"
+      fontSize : this.state.header.hover? "1.5vw" : "1.1vw"
     }
 
     const anchorStyleLeft = {
@@ -178,6 +178,10 @@ class App extends Component {
               <h1> Projects </h1>
             </div>
             <Carousel count = {this.state.carouselTimer}/>
+          </section>
+          <section id = "contact">
+            <h1> Contact </h1>
+            
           </section>
         </main>
       </div>

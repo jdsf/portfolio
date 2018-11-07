@@ -5,6 +5,7 @@ import {TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import zen from '../assets/zen.png';
 import notes from '../assets/notes.png'
+import nutri from '../assets/nutri.png'
 
 class Carousel extends Component {
 
@@ -12,11 +13,14 @@ class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = ({
-      images: [zen, notes],
+      images: [zen, notes, nutri],
       blurbs: [
-        "A simple zen-styled page made with vanilla js",
-        "A light-weight daily notes/diary page"
+        "A simple zen styled site made with vanilla js",
+        "Light single page diary app made with react",
+        "A nutrition app that helps find macro info " +
+         "and visualize portion control, made with react"
       ],
+      links: ["#", "#", "#"],
       count: props.count,
       hover: false,
       transitioning: true
@@ -55,7 +59,8 @@ class Carousel extends Component {
     };
 
     const blurbStyle = {
-      opacity: (this.state.hover ? "0" : "1")
+      opacity: (this.state.hover ? "0" : "1"),
+      transition: "all 1000ms ease"
     };
 
     return (
@@ -64,7 +69,7 @@ class Carousel extends Component {
           <TransitionGroup>
             <CSSTransition
               key = {this.state.count}
-              timeout = {300}
+              timeout = {1000}
               classNames = "image"
             >
               <img className = {"image-number-" + this.state.count}
@@ -82,13 +87,36 @@ class Carousel extends Component {
           style = {screenStyle}
         >
         </div>
-        <CSSTransition>
-          <p style = {blurbStyle}>
-            {blurb}
-          </p>
-        </CSSTransition>
+        <TransitionGroup style = {blurbStyle}>
+          <CSSTransition
+            key = {this.state.count}
+            timeout = {1000}
+            classNames = "blurb"
+          >
+            <p >
+              {blurb}
+            </p>
+          </CSSTransition>
+        </TransitionGroup>
       </div>
     );
+  }
+
+  buildDots = () => {
+    let dots = []
+    let active = this.state.count;
+    for (let i = 0; i < this.state.blurbs.length; i++) {
+      dots.push(
+        <div
+          className = {( i === active) ?
+            "active-dot" : undefined
+          }
+        >
+        </div>
+      );
+    }
+
+    return dots;
   }
 
   componentWillReceiveProps(props) {
@@ -98,13 +126,18 @@ class Carousel extends Component {
   }
   render(){
     let carousel = this.buildThumb();
-
+    let dots = this.buildDots();
 
     return(
-      <div onMouseEnter = {this.hoverOn.bind(this)}
-        onMouseLeave = {this.hoverOff.bind(this)}
-      >
-        {carousel}
+      <div id = "carousel-container">
+        <div onMouseEnter = {this.hoverOn.bind(this)}
+          onMouseLeave = {this.hoverOff.bind(this)}
+        >
+          {carousel}
+        </div>
+        <div id = "dots">
+          {dots}
+        </div>
       </div>
     );
   }
