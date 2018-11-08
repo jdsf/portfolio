@@ -119,7 +119,7 @@ class App extends Component {
               </div>
               <div className = "circle" id = "circle-4">
               </div>
-              <h1>  Hello,</h1>
+              <h1>  hello,</h1>
             </div>
             <div id = "second-greeting">
               <div className = "circle" id = "circle-5">
@@ -129,7 +129,7 @@ class App extends Component {
           </section>
           <section id = "about">
             <article>
-              <img id = "me" src= {headshot} alt ="Me!" />
+
               <div id = "about-greeting">
                 <div className = "circle" id = "circle-6">
                 </div>
@@ -185,6 +185,10 @@ class App extends Component {
             </article>
           </section>
           <section id = "projects">
+            <div className = "circle circle-outline" id = "project-circle01">
+            </div>
+            <div className = "circle circle-outline" id = "project-circle02">
+            </div>
             <div id = "projects-greeting">
               <div className = "circle">
               </div>
