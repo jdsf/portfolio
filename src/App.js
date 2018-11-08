@@ -4,6 +4,11 @@ import Carousel from './components/Carousel'
 
 import headshot from "./assets/stadfor.jpg"
 import zen from "./assets/zen.png"
+import git from "./assets/git.png"
+import link from "./assets/link.png"
+import mail from "./assets/mail.png"
+import phone from "./assets/phone.png"
+
 import './App.css';
 
 class App extends Component {
@@ -97,6 +102,14 @@ class App extends Component {
         </header>
         <main id = "main-view">
           <section id = "intro">
+            <div className = "circle circle-outline" id = "circle-01">
+            </div>
+            <div className = "circle circle-outline" id = "circle-02">
+            </div>
+            <div className = "circle circle-outline" id = "circle-03">
+            </div>
+            <div className = "circle circle-outline" id = "circle-04">
+            </div>
             <div id= "greeting-container">
               <div className = "circle" id = "circle-1">
               </div>
@@ -180,8 +193,33 @@ class App extends Component {
             <Carousel count = {this.state.carouselTimer}/>
           </section>
           <section id = "contact">
-            <h1> Contact </h1>
-            
+            <div id = "contact-greeting">
+              <div id = "contact-c1" className = "circle">
+              </div>
+              <div id = "contact-c2" className = "circle">
+              </div>
+              <h1> CONTACT </h1>
+
+              <ul id = "contact-links">
+                <li>
+                  <img src = {phone} alt = "phone number"/>
+                  206 519 4109
+                </li>
+                <li>
+                  <img src = {link} alt = "linkedin profile"/>
+                  jdsf
+                </li>
+                <li>
+                  <img src = {git} alt = "github profile"/>
+                  jdsf
+                </li>
+                <li>
+                  <img src = {mail} alt = "email address"/>
+                  jdsfrugone@gmail
+                </li>
+              </ul>
+
+            </div>
           </section>
         </main>
       </div>

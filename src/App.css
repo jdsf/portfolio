@@ -8,7 +8,7 @@
   position: absolute; width: 100%;
   display: flex; flex-direction: row;
   justify-content: space-between; align-content: center;
-  mix-blend-mode: screen;
+  mix-blend-mode:screen;
 }
 
 header{
@@ -20,12 +20,12 @@ header{
 
 header h1 {
   padding: 0; margin: 0px; transition: all 800ms ease;
-    border: 1px solid white;
+    order: 1px solid white;
 }
 
 header a, header h1 {
  padding: 5px;
-  text-decoration: none; color: black; margin: auto;
+  text-decoration: none;  margin: auto;
   color: white;
 }
 
@@ -79,13 +79,12 @@ section {
 
 
 #intro {
-  background-color: #f0f9a2e6;
+  background-color: beige;
 }
 
 #intro h1{
   color: white;
-  position: relative;
-  z-index: 5;
+  z-index: 50;
   display: inline-block;
   padding: 0; margin: 0;
   font-size: 15vw;
@@ -93,47 +92,72 @@ section {
 
 
 #greeting-container {
-  z-index: 0;
   position: absolute; top: 50px; right: 50px;
 }
 
-.circle{
-  mix-blend-mode:overlay;
-  top: 10%;
-  position: absolute;
-  border-radius: 100%; height: 15vw; width: 15vw;
-}
+  .circle{
+    mix-blend-mode:overlay;
+    top: 10%;
+    position: absolute;
+    border-radius: 100%; height: 15vw; width: 15vw;
+  }
 
-#circle-1{
-  left: 2%; top: 20%;
-  background-color: #b8b8d1;
-}
+  .circle-outline{
+    position: absolute;
+    top: -100vh; right: -100vh;
+    height: 200vh; width: 200vh;
+    border: 1px solid black;
+    background-color:none;
+    mix-blend-mode:darken;
+  }
 
-#circle-2{
-  left: 20%;
-  background-color: #72b573;
-}
+  #circle-01{
+    top: -95vh; right: -95vh;
+    height: 190vh; width: 190vh;
+  }
+  #circle-02{
+    top: -100vh; right: -100vh;
+    height: 200vh; width: 200vh;
+  }
+  #circle-03{
+    top: -80vh; right: -80vh;
+    height: 160vh; width: 160vh;
+  }
+  #circle-04{
+    top: 0; bottom: -100vh; right: -100vh;
+    height: 200vh; width: 200vh;
+  }
 
-#circle-3{
-  left: 40%; top: 15%;
-  background-color: #b1d785;
-}
+  #circle-1{
+    left: 2%; top: 20%;
+    background-color: #000000;
+  }
 
-#circle-4{
-  left: 60%; top: 20%;
-  background-color: #ff4f4f8c;
-}
+  #circle-2{
+    left: 20%;
+    background-color: #ff000c
+  }
+
+  #circle-3{
+    left: 40%; top: 15%;
+    background-color: #b1d785;
+  }
+
+  #circle-4{
+    left: 60%; top: 20%;
+    background-color: #0758ea;
+  }
 
 
-#second-greeting{
-  position: absolute; left: 10%; bottom: 15%;
-  width: 22%; height: auto;
-}
+  #second-greeting{
+    position: absolute; left: 10%; bottom: 15%;
+    width: 22%; height: auto;
+  }
 
-#intro h2{
+  #intro h2{
   padding: 0; margin: 0;
   z-index: 100;
-  color: white;
+  color: black;
   font-size: 5vw; text-align: left;
 }
 
@@ -142,13 +166,13 @@ section {
   height: 25vw; width: 25vw;
   left: 2%;
   background-color: #969618;
-  mix-blend-mode: overlay;
+  mix-blend-mode:lighten;
 }
 
 /* About */
 
 #about{
-  background-color: #ebf4a2;
+  background-color: beige;
   overflow-y: hidden;
   overflow-x: hidden;
 }
@@ -229,7 +253,7 @@ strong.pop-out{
 /* Projects */
 
 #projects{
-  background-color: #aa3838;
+  background-color: beige;
   overflow: hidden;
 }
 
@@ -332,6 +356,51 @@ strong.pop-out{
 
 #dots div.active-dot{
   background-color: white;
+}
+
+/* Contact */
+
+#contact{
+  background-color: beige;
+}
+
+#contact #contact-greeting{
+  height: 10%; width: 20%;
+  position: absolute; right: 15%; top: 10%;
+}
+
+#contact-greeting h1{
+  color: white;
+  top: 65%; left: 25%; position: absolute;
+  font-size: 3.5vh;
+  margin: 0; padding: 0;
+}
+
+#contact-c1{
+  background-color: red;
+  top:0%; right: 15%;
+}
+
+#contact-c2{
+  background-color: indigo;
+  top: -25%; right: -25%;
+}
+
+
+#contact-links{
+  border: 1px solid black;
+  margin: 0; padding: 20px;
+  position: absolute; top: 400%; left: -110%;
+  list-style: none; min-width: 150px;
+}
+
+#contact-links li {
+  font-size: 11pt;
+  display: flex; flex-direction: row; justify-content: space-around;
+}
+
+#contact-links img {
+  width: 20px; height: 20px;
 }
 
 /* CSS Animations */
