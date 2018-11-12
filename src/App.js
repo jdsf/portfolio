@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Slide from 'react-reveal/Slide';
-import Carousel from './components/Carousel'
-
+import Carousel from './components/Carousel';
+import WayWrapper from './components/WayWrapper'
 
 import headshot from "./assets/stadfor.jpg"
 import zen from "./assets/zen.png"
@@ -37,8 +36,6 @@ class App extends Component {
     } else {
       future = 0;
     }
-
-    console.log(this.state);
     this.setState({
       carouselTimer: future
     });
@@ -55,6 +52,9 @@ class App extends Component {
       header: {hover: false}
     });
   }
+
+
+
 
 
   render() {
@@ -111,19 +111,22 @@ class App extends Component {
             </div>
             <div className = "circle circle-outline" id = "circle-04">
             </div>
-            <Slide right top > 
-            <div id= "greeting-container">
-              <div className = "circle" id = "circle-1">
+            <WayWrapper
+              timeout = {1000}
+              name = "scroll-top"
+            >
+              <div id= "greeting-container">
+                <div className = "circle" id = "circle-1">
+                </div>
+                <div className = "circle" id = "circle-2">
+                </div>
+                <div className = "circle" id = "circle-3">
+                </div>
+                <div className = "circle" id = "circle-4">
+                </div>
+                <h1>  hello,</h1>
               </div>
-              <div className = "circle" id = "circle-2">
-              </div>
-              <div className = "circle" id = "circle-3">
-              </div>
-              <div className = "circle" id = "circle-4">
-              </div>
-              <h1>  hello,</h1>
-            </div>
-            </Slide>
+            </WayWrapper>
             <div id = "second-greeting">
               <div className = "circle" id = "circle-5">
               </div>
