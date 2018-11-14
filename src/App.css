@@ -1,5 +1,6 @@
-.App {
+.App, body   {
   text-align: center;
+  overflow: hidden;
 }
 
 /*header styling */
@@ -106,13 +107,19 @@ section {
 
   .circle-outline{
     z-index: 1000;
-    position: absolute;
+    position:relative;
     top: -100vh; right: -100vh;
     height: 200vh; width: 200vh;
     border: 1px solid black;
     background-color:none;
     mix-blend-mode:darken;
   }
+
+
+  #circle-01-pos, #circle-02-pos, #circle-03-pos, #circle-04-pos{
+    position: absolute;
+  }
+
 
   #circle-01{
     top: -95vh; right: -95vh;
@@ -154,14 +161,17 @@ section {
 
   #second-greeting{
     position: absolute; left: 10%; bottom: 15%;
-    width: 22%; height: auto;
+    width: 20%;
   }
 
   #intro h2{
-  padding: 0; margin: 0;
-  z-index: 100;
-  color: black;
-  font-size: 5vw; text-align: left;
+    background-color: beige;
+    z-index: 1;
+    padding: 0; margin: 0;
+    z-index: 100;
+    color: black;
+    font-size: 5vw; text-align: left;
+    overflow: hidden;
 }
 
 #circle-5{
@@ -511,8 +521,13 @@ strong.pop-out{
 
 /* scrolling Waypoint animations*/
 
+.anims{
+  overflow: hidden;
+}
+
+
 .way-wrapper{
-  position: relative;  height: 200px;
+  position: absolute;  height: 200px;
   transition: all 1000 ease;
 }
 
@@ -537,4 +552,50 @@ strong.pop-out{
   opacity: 0;
   transform: translateY(100%);
   transition: all 1000ms ease;
+}
+
+
+.scroll-left-enter{
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.scroll-left-enter-active{
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 1500ms 500ms ease;
+}
+
+.scroll-left-exit{
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.scroll-left-exit-active{
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1500ms ease-out;
+}
+
+
+.rapid-right-enter{
+  opacity: 1;
+  transform: translateX(100%);
+}
+
+.rapid-right-enter-active{
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 500ms ease;
+}
+
+.rapid-right-exit{
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.rapid-right-exit-active{
+  opacity: 1;
+  transform: translateX(100%);
+  transition: all 500ms ease-out;
 }

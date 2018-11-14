@@ -39,8 +39,13 @@ class WayWrapper extends Component{
       <Waypoint
         onEnter = {this._handleWayPointEnter}
         onLeave = {this._handleWayPointLeave}
+        topOffset = {this.props.top ? this.props.top : undefined}
+        bottomOffset = {this.props.bottom ? this.props.bottom : undefined}
       >
-        <div className = "way-wrapper">
+        <div
+          id = {this.props.eyeD? this.props.eyeD : undefined}
+          className = {this.props.classNaym? this.props.classNaym : undefined}
+        >
           <CSSTransition
             mountOnEnter
             unmountOnExit

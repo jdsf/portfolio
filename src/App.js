@@ -103,35 +103,70 @@ class App extends Component {
         </header>
         <main id = "main-view">
           <section id = "intro">
-            <div className = "circle circle-outline" id = "circle-01">
-            </div>
-            <div className = "circle circle-outline" id = "circle-02">
-            </div>
-            <div className = "circle circle-outline" id = "circle-03">
-            </div>
-            <div className = "circle circle-outline" id = "circle-04">
-            </div>
+            <WayWrapper
+              timeout = {500}
+              name = "rapid-right"
+              eyeD = "circle-01-pos"
+              bottom = "200px"
+            >
+              <div className = "circle circle-outline" id = "circle-01">
+              </div>
+            </WayWrapper>
+            <WayWrapper
+              timeout = {500}
+              name = "rapid-right"
+              eyeD = "circle-02-pos"
+              top = "100px"
+              bottom = "-100px"
+            >
+              <div className = "circle circle-outline" id = "circle-02">
+              </div>
+            </WayWrapper>
+            <WayWrapper
+              timeout = {500}
+              name = "rapid-right"
+              eyeD = "circle-03-pos"
+            >
+              <div className = "circle circle-outline" id = "circle-03">
+              </div>
+            </WayWrapper>
+            <WayWrapper
+              timeout = {500}
+              name = "rapid-right"
+              eyeD = "cirlce-04-pos"
+            >
+              <div className = "circle circle-outline" id = "circle-04">
+              </div>
+            </WayWrapper>
             <WayWrapper
               timeout = {1000}
               name = "scroll-top"
+              eyeD = "greeting-container"
+              bottom = "-200px"
             >
-              <div id= "greeting-container">
-                <div className = "circle" id = "circle-1">
-                </div>
-                <div className = "circle" id = "circle-2">
-                </div>
-                <div className = "circle" id = "circle-3">
-                </div>
-                <div className = "circle" id = "circle-4">
-                </div>
-                <h1>  hello,</h1>
-              </div>
+                <h1>  hello,
+                  <div className = "circle" id = "circle-1">
+                  </div>
+                  <div className = "circle" id = "circle-2">
+                  </div>
+                  <div className = "circle" id = "circle-3">
+                  </div>
+                  <div className = "circle" id = "circle-4">
+                  </div>
+                </h1>
             </WayWrapper>
-            <div id = "second-greeting">
-              <div className = "circle" id = "circle-5">
-              </div>
-              <h2> please enjoy your stay. </h2>
-            </div>
+            <WayWrapper
+              timeout = {2000}
+              name = "scroll-left"
+              eyeD = "second-greeting"
+              top = "40%"
+              bottom = "-90%"
+            >
+                <h2> please enjoy your stay.
+                  <div className = "circle" id = "circle-5">
+                  </div>
+                </h2>
+            </WayWrapper>
           </section>
           <section id = "about">
             <article>
