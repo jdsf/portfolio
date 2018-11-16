@@ -14,6 +14,8 @@ import './App.css';
 class App extends Component {
   constructor(props){
     super(props);
+    this.appRef = React.createRef();
+    this.introRef = React.createRef();
 
     this.state = ({
       header: {hover: false},
@@ -82,7 +84,7 @@ class App extends Component {
 
 
     return (
-      <div className="App scrollable">
+      <div ref = {this.appRef} className="App scrollable">
         <header style = {headerStyle}
                 onMouseEnter = {this.headerActive}
                 onMouseLeave = {this.headerDeactive}
@@ -102,12 +104,15 @@ class App extends Component {
           > CONTACT </a>
         </header>
         <main id = "main-view">
-          <section id = "intro">
+          <section ref = {this.introRef} id = "intro">
             <WayWrapper
+              scrollRef = {this.introRef.curent}
               timeout = {500}
               name = "rapid-right"
               eyeD = "circle-01-pos"
-              bottom = "200px"
+              top = {"0px"}
+              bottom = {"0px"}
+              debug = {true}
             >
               <div className = "circle circle-outline" id = "circle-01">
               </div>
@@ -116,8 +121,8 @@ class App extends Component {
               timeout = {500}
               name = "rapid-right"
               eyeD = "circle-02-pos"
-              top = "100px"
-              bottom = "-100px"
+              top = "0px"
+              bottom = "0px"
             >
               <div className = "circle circle-outline" id = "circle-02">
               </div>
@@ -126,6 +131,7 @@ class App extends Component {
               timeout = {500}
               name = "rapid-right"
               eyeD = "circle-03-pos"
+              bottom = "0px"
             >
               <div className = "circle circle-outline" id = "circle-03">
               </div>
@@ -134,6 +140,7 @@ class App extends Component {
               timeout = {500}
               name = "rapid-right"
               eyeD = "cirlce-04-pos"
+              bottom = "0px"
             >
               <div className = "circle circle-outline" id = "circle-04">
               </div>
