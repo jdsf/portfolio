@@ -107,12 +107,12 @@ class App extends Component {
         <main id = "main-view">
           <section ref = {this.introRef} id = "intro">
             <WayWrapper
-              timeout = {1000}
+              timeoutIn = {1000}
+              timeoutOut = {1000}
               name = "rapid-right"
               eyeD = "circle-01-pos"
-              top = {"-30%"}
+              top = {"-10%"}
               bot = {"0px"}
-              debug = {true}
             >
               <div className = "circle circle-outline" id = "circle-01">
               </div>
@@ -152,7 +152,8 @@ class App extends Component {
               timeout = {1000}
               name = "scroll-top"
               eyeD = "greeting-container"
-              bottom = "-200px"
+              top = {"0%"}
+              bot = {"0%"}
             >
                 <h1>  hello,
                   <div className = "circle" id = "circle-1">
@@ -166,11 +167,13 @@ class App extends Component {
                 </h1>
             </WayWrapper>
             <WayWrapper
-              timeout = {2000}
+              timeoutIn = {1500}
+              timeoutOut = {500}
               name = "scroll-left"
               eyeD = "second-greeting"
-              top = "40%"
-              bottom = "-90%"
+              top = {"-20%"}
+              bot = {"0%"}
+              debug = {true}
             >
                 <h2> please enjoy your stay.
                   <div className = "circle" id = "circle-5">

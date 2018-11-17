@@ -46,7 +46,17 @@ class WayWrapper extends Component{
             mountOnEnter
             unmountOnExit
             in = {this.state.shouldShow}
-            timeout = {this.state.shoulShow? this.props.timeoutIn : this.props.timeoutOut}
+            timeout = {
+              () => {
+                if (this.props.timeout){
+                  return this.props.timeout
+                } else if (this.state.shouldShow) {
+                  return this.props.timeoutIn
+                } else {
+                  return this.props.timeoutOut
+                }
+              }
+            }
             classNames = {this.props.name}
           >
             {this.props.children}
