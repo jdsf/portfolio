@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from './components/Carousel';
+import Waypoint from 'react-waypoint';
 import WayWrapper from './components/WayWrapper'
 
 import headshot from "./assets/stadfor.jpg"
@@ -106,41 +107,43 @@ class App extends Component {
         <main id = "main-view">
           <section ref = {this.introRef} id = "intro">
             <WayWrapper
-              scrollRef = {this.introRef.curent}
-              timeout = {500}
+              timeout = {1000}
               name = "rapid-right"
               eyeD = "circle-01-pos"
-              top = {"0px"}
-              bottom = {"0px"}
+              top = {"-30%"}
+              bot = {"0px"}
               debug = {true}
             >
               <div className = "circle circle-outline" id = "circle-01">
               </div>
             </WayWrapper>
             <WayWrapper
-              timeout = {500}
+              timeout = {1000}
               name = "rapid-right"
               eyeD = "circle-02-pos"
-              top = "0px"
+              top = "-50%"
               bottom = "0px"
             >
               <div className = "circle circle-outline" id = "circle-02">
               </div>
             </WayWrapper>
             <WayWrapper
-              timeout = {500}
+              timeout = {1000}
               name = "rapid-right"
               eyeD = "circle-03-pos"
+              top = {"-20%"}
               bottom = "0px"
             >
               <div className = "circle circle-outline" id = "circle-03">
               </div>
             </WayWrapper>
             <WayWrapper
-              timeout = {500}
+              timeoutIn = {1000}
+              timeoutOut = {1500}
               name = "rapid-right"
               eyeD = "cirlce-04-pos"
-              bottom = "0px"
+              top = {" -150%"}
+              bot = {"0"}
             >
               <div className = "circle circle-outline" id = "circle-04">
               </div>
