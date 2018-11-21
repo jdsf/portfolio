@@ -168,35 +168,63 @@ class App extends Component {
             </WayWrapper>
             <WayWrapper
               timeoutIn = {1500}
-              timeoutOut = {500}
+              timeoutOut = {1000}
               name = "scroll-left"
               eyeD = "second-greeting"
               top = {"-20%"}
               bot = {"0%"}
-              debug = {true}
             >
                 <h2> please enjoy your stay.
-                  <div className = "circle" id = "circle-5">
-                  </div>
+                  <WayWrapper
+                    timeout = {500}
+                    name = "scroll-left"
+                    eyeD = "wrap"
+                  >
+                    <div className = "circle" id = "circle-5">
+                    </div>
+                  </WayWrapper>
                 </h2>
             </WayWrapper>
           </section>
           <section id = "about">
             <article>
-              <div id = "about-greeting">
-                <div className = "circle" id = "circle-6">
-                </div>
-                <h1> Acerca de </h1>
-              </div>
+              <WayWrapper
+                timeout = {500}
+                name = "scroll-left"
+                eyeD = "about-greeting"
+                bot = {'50%'}
+                top = {'-20%'}
+              >
+                  <h1> Acerca de
+                    <div className = "circle" id = "circle-6">
+                    </div>
+                  </h1>
+              </WayWrapper>
+
               <div id = "about-blurb">
-                <p id = "first-blurb">
-                  <span>
-                  <strong className = "pop-out">
-                    Greetings!
-                  </strong> My name is Jose, I'm a bioengineering graduate
-                  from UW Seattle exploring the world of web development and design
-                  </span>
-                </p>
+                <WayWrapper
+                  name = "scroll-right"
+                  timeout = {1000}
+                  debug = {true}
+                  bot = {'60%'}
+                  top = {'5%'}
+                >
+                  <p id = "first-blurb">
+                    <span>
+                    <strong className = "pop-out">
+                      Greetings!
+                    </strong> My name is Jose, I'm a bioengineering graduate
+                    from UW Seattle exploring the world of web development and design
+                    </span>
+                  </p>
+                </WayWrapper>
+                <WayWrapper
+                  name = "scroll-right"
+                  timeout = {1000}
+                  debug = {true}
+                  bot = {'65%'}
+                  top = {'-5%'}
+                >
                 <p id= "second-blurb">
                   Here you'll find some of the work I've produced
                   during my trek. Truth be told with all the different ways things
@@ -204,6 +232,7 @@ class App extends Component {
                   All in all I've been dabbling in javascript for about 7 months
                   and react for close to 3
                 </p>
+                </WayWrapper>
                 <p id = "third-blurb">
                     <span>
                       <strong className = "pop-out">
