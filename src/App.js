@@ -132,7 +132,7 @@ class App extends Component {
               name = "rapid-right"
               eyeD = "circle-03-pos"
               top = {"-20%"}
-              bottom = "0px"
+              bot = {"0%"}
             >
               <div className = "circle circle-outline" id = "circle-03">
               </div>
@@ -200,12 +200,10 @@ class App extends Component {
                     </div>
                   </h1>
               </WayWrapper>
-
               <div id = "about-blurb">
                 <WayWrapper
                   name = "scroll-right"
                   timeout = {1000}
-                  debug = {true}
                   bot = {'60%'}
                   top = {'5%'}
                 >
@@ -221,7 +219,6 @@ class App extends Component {
                 <WayWrapper
                   name = "scroll-right"
                   timeout = {1000}
-                  debug = {true}
                   bot = {'65%'}
                   top = {'-5%'}
                 >
@@ -233,70 +230,145 @@ class App extends Component {
                   and react for close to 3
                 </p>
                 </WayWrapper>
-                <p id = "third-blurb">
+                <WayWrapper
+                  name = "scroll-right"
+                  timeout = {1000}
+                  bot = {'70%'}
+                  top = {'-10%'}
+                >
+                  <p id = "third-blurb">
+                      <span>
+                        <strong className = "pop-out">
+                          Some background
+                        </strong>
+                        I took some introductory OOP, statistical and engineering
+                        programming during school but I didn't really become personally
+                        invested in the things I had created until my last quarter of school
+                        when I took
+                        a web development class on a whim. We were strained for time
+                        but still managed to cover a little bit about vanilla js, basic HTML
+                        CSS, JSON, AJAX, serving and using APIs through PHP, as well as
+                        tiny bit of SQL. There's still so much more to learn!
+                      </span>
+                  </p>
+                </WayWrapper>
+                <WayWrapper
+                  name = "scroll-right"
+                  timeout = {1000}
+                  bot = {'80%'}
+                  top = {'-15%'}
+                >
+                  <p id = "fourth-blurb">
                     <span>
                       <strong className = "pop-out">
-                        Some background
+                        Miscellaneous
                       </strong>
-                      I took some introductory OOP, statistical and engineering
-                      programming during school but I didn't really become personally
-                      invested in the things I had created until my last quarter of school
-                      when I took
-                      a web development class on a whim. We were strained for time
-                      but still managed to cover a little bit about vanilla js, basic HTML
-                      CSS, JSON, AJAX, serving and using APIs through PHP, as well as
-                      tiny bit of SQL. There's still so much more to learn!
+                      Born in Santa Cruz de la Sierra, Bolivia,
+                      a mid-sized landlocked country in the middle of South
+                      America (pop ~12 million) bordering Brazil, Argentina,
+                      Paraguay, Chile and Peru
                     </span>
-                </p>
-                <p id = "fourth-blurb">
-                  <span>
-                    <strong className = "pop-out">
-                      Miscellaneous
-                    </strong>
-                    I was born in Santa Cruz,
-                    Bolivia, a mid-sized landlocked country in the heart of South
-                    America home to ~12 million people
-                  </span>
-                </p>
-                <p id = "fifth-blurb">
-                  <span>
-                    We sadly don't have the best infrastructure for tidy
-                    record-keeping—in fact, birth certificates were not a thing
-                    until 1940 and are still not a thing in some parts of the rural
-                    country—but Julia Flores Colque, a strong and humble Quechua
-                    woman, may be the world oldest
-                    person at 118 years of age. <strong>Take that</strong>,
-                    low human development index!
-                  </span>
-                </p>
-                <p id = "sixth-blurb">
-                  <span>
-                    Charitable understanding is an important thing in this world
-                  </span>
-                </p>
+                  </p>
+                </WayWrapper>
+                <WayWrapper
+                  name = "scroll-right"
+                  timeout = {1000}
+                  bot = {'81%'}
+                  top = {'-20%'}
+                >
+                  <p id = "fifth-blurb">
+                    <span>
+                      Though infamous for our third world
+                      record-keeping—in fact, birth certificates were not a thing
+                      until 1940 and are still not a thing in some parts of the rural
+                      country—a Bolivian, Julia Flores Colque, of humble Quechua
+                      descent, may be the world oldest
+                      person at 118 years of age. <strong>Take that</strong>,
+                      human development index!
+                    </span>
+                  </p>
+                </WayWrapper>
+                <WayWrapper
+                  name = "scroll-right"
+                  timeout = {1000}
+                  bot = {'81%'}
+                  top = {'-23%'}
+                >
+                  <p id = "sixth-blurb">
+                    <span>
+                      Charitable understanding is an important thing in this world
+                    </span>
+                  </p>
+                </WayWrapper>
               </div>
             </article>
           </section>
           <section id = "projects">
-            <div className = "circle circle-outline" id = "project-circle01">
-            </div>
-            <div className = "circle circle-outline" id = "project-circle02">
-            </div>
-            <div id = "projects-greeting">
-              <div className = "circle">
+            <WayWrapper
+              name = "scroll-left"
+              timeout = {500}
+              bot = {'45%'}
+              top = {'-120%'}
+            >
+              <div className = "circle circle-outline" id = "project-circle01">
               </div>
-              <h1> Projects </h1>
-            </div>
-            <Carousel count = {this.state.carouselTimer}/>
+            </WayWrapper>
+            <WayWrapper
+              name = "scroll-left"
+              timeout = {500}
+              bot = {'40%'}
+              top = {'-120%'}
+              debug = {true}
+            >
+              <div className = "circle circle-outline" id = "project-circle02">
+              </div>
+            </WayWrapper>
+            <WayWrapper
+              name = "scroll-right"
+              eyeD = "projects-greeting"
+              timeout = {1000}
+              bot = {'30%'}
+              top = {'-50%'}
+            >
+              <div id = "projects-greeting">
+                <h1> Projects
+                  <div className = "circle">
+                  </div>
+                </h1>
+              </div>
+            </WayWrapper>
+            <WayWrapper
+              eyeD = "carousel-container"
+              name = "fade"
+              timeout = {1000}
+              bot = {'30%'}
+              top = {'-30%'}
+            >
+                <Carousel count = {this.state.carouselTimer}/>
+            </WayWrapper>
           </section>
           <section id = "contact">
-            <div id = "contact-greeting">
-              <div id = "contact-c1" className = "circle">
-              </div>
-              <div id = "contact-c2" className = "circle">
-              </div>
-              <h1> CONTACT </h1>
+            <WayWrapper
+              eyeD = "contact-greeting"
+              name = "scroll-right"
+              timeout = {1000}
+              bot = {'50%'}
+              top = { '-10%'}
+            >
+              <h1> CONTACT
+                <div id = "contact-c1" className = "circle">
+                </div>
+                <div id = "contact-c2" className = "circle">
+                </div>
+              </h1>
+            </WayWrapper>
 
+            <WayWrapper
+              name = "fade"
+              timeout = {1000}
+              bot = {'60%'}
+              top = {'-30%'}
+            >
               <ul id = "contact-links">
                 <li>
                   <img src = {phone} alt = "phone number"/>
@@ -315,8 +387,7 @@ class App extends Component {
                   jdsfrugone@gmail
                 </li>
               </ul>
-
-            </div>
+            </WayWrapper>
           </section>
         </main>
       </div>

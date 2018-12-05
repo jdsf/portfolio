@@ -129,8 +129,14 @@ class Carousel extends Component {
     let dots = this.buildDots();
 
     return(
-      <div id = "carousel-container">
-        <div onMouseEnter = {this.hoverOn.bind(this)}
+      <div style = {
+        {width: "100%", height: "100%", position: "relative"}
+      }>
+        <div
+          style = {
+            {width: "100%", height: "100%"}
+          }
+          onMouseEnter = {this.hoverOn.bind(this)}
           onMouseLeave = {this.hoverOff.bind(this)}
         >
           {carousel}
