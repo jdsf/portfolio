@@ -8,6 +8,7 @@
 /*header styling */
 
 .App header{
+  z-index: 99999999999999;
   position: absolute; width: 100%;
   display: flex; flex-direction: row;
   justify-content: space-between; align-content: center;
@@ -17,7 +18,7 @@ header{
   top: 10px;
   transition: all 800ms ease;
   font-size: 1vw;
-  z-index: 999999;
+  z-index: 99999999999999;
 }
 
 header h1 {
@@ -388,7 +389,7 @@ strong.pop-out{
 
 #thumbnail-container div.screen{
   transition: all 1000ms ease;
-  opacity: .6; background-color: black;
+  opacity: .8; background-color: black;
   width: 100%; height: 100%;
   position: absolute;
   top: 0;

@@ -134,7 +134,7 @@ class Carousel extends Component {
       }>
         <div
           style = {
-            {width: "100%", height: "100%"}
+            {width: "100%", height: "100%", position: "relative"}
           }
           onMouseEnter = {this.hoverOn.bind(this)}
           onMouseLeave = {this.hoverOff.bind(this)}
