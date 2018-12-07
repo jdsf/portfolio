@@ -223,7 +223,7 @@ class App extends Component {
                   >
                   <p id= "second-blurb">
                     I'm still learning the ropes (about ~5 month experience with
-                    react) but here you'll find some of the things I've made during
+                    react), here you'll find some of the things I've made during
                     my trek
                   </p>
                   </WayWrapper>
@@ -239,14 +239,14 @@ class App extends Component {
                             Some background
                           </strong>
                           I have some introductory OOP and statistical/engineering
-                          programming from school but to be honest I didn't really
+                          programming knowledge from school but to be honest I didn't
                           become personally
                           invested in the things I played around with until my
-                          last quarter of school
-                          when I took a web development. We were strained for time
-                          but still managed to cover a little bit of vanilla js, basic HTML
-                          CSS, JSON, AJAX, serving and using APIs through PHP, as well as
-                          tiny bit of SQL. Safe to say I was blown away
+                          last quarter of school,
+                          when I took a web development class! We were strained for time
+                          but still managed to get a flavor for what full stack development
+                          might entail (vanilla js, css, php, sql, apis, json).
+                          Safe to say I was left wanting more!
                         </span>
                     </p>
                   </WayWrapper>
@@ -372,18 +372,22 @@ class App extends Component {
               >
                 <ul id = "contact-links">
                   <li>
-                    <img src = {phone} alt = "phone number"/>
-                    206 519 4109
+                      <img src = {phone} alt = "phone number"/>
+                      206 519 4109
                   </li>
                   <li>
-                    <img src = {link} alt = "linkedin profile"/>
-                    jdsf
+                    <a href = "https://www.linkedin.com/in/jdsfru/">
+                      <img src = {link} alt = "linkedin profile"/>
+                      jdsf
+                    </a>
                   </li>
                   <li>
-                    <img src = {git} alt = "github profile"/>
-                    jdsf
+                    <a href ="https://github.com/jdsf">
+                      <img src = {git} alt = "github profile"/>
+                      jdsf
+                    </a>
                   </li>
-                  <li>
+                  <li id ="mail-li">
                     <img src = {mail} alt = "email address"/>
                     jdsfrugone@gmail
                   </li>
