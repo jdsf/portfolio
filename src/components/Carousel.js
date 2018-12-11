@@ -3,9 +3,9 @@ import {TransitionGroup, CSSTransition } from 'react-transition-group';
 
 
 
-import zen from '../assets/zen.png';
-import notes from '../assets/notes.png'
-import nutri from '../assets/nutri.png'
+import zen from '../assets/zen1.jpg';
+import notes from '../assets/notes1.jpg'
+import nutri from '../assets/nutri1.jpg'
 
 class Carousel extends Component {
 
@@ -15,12 +15,15 @@ class Carousel extends Component {
     this.state = ({
       images: [zen, notes, nutri],
       blurbs: [
-        "A simple zen styled site made with vanilla js",
+        "My first project, a zen styled web page in vanilla js (warning: slow image loading)",
         "Light single page diary app made with react",
         "A nutrition app that helps find macro info " +
          "and visualize portion control, made with react"
       ],
-      links: ["#", "#", "#"],
+      links: ["https://jdsf.github.io/zen-page/home.html",
+              "https://jdsf.github.io/notes",
+              "https://jdsf.github.io/nutri"
+              ],
       count: props.count,
       hover: false,
       transitioning: true
@@ -42,11 +45,13 @@ class Carousel extends Component {
   buildThumb = () => {
     let blurbList = this.state.blurbs;
     let imageList = this.state.images;
+    let linkList = this.state.links;
     let place = this.state.count;
     let altString = "Project number " + (place + 1);
 
     let blurb = blurbList[place];
     let image = imageList[place];
+    let link = linkList[place];
 
 
 
@@ -78,7 +83,7 @@ class Carousel extends Component {
             </CSSTransition>
           </TransitionGroup>
         </div>
-        <a href = "#"
+        <a href = {link}
            style = {anchorStyle}
          >
           <span> Visit </span>
