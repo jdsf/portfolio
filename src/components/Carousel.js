@@ -20,9 +20,9 @@ class Carousel extends Component {
         "A nutrition app that helps find macro info " +
          "and visualize portion control, made with react"
       ],
-      links: ["https://jdsf.github.io/zen-page/home.html",
-              "https://jdsf.github.io/notes",
-              "https://jdsf.github.io/nutri"
+      links: ["https://jdsf.github.io/zen-page/",
+              "https://jdsf.github.io/notes-react/",
+              "https://jdsf.github.io/nutrition-react"
               ],
       count: props.count,
       hover: false,
