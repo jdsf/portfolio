@@ -9,7 +9,7 @@ import link from "./assets/link.png"
 import mail from "./assets/mail.png"
 import phone from "./assets/phone.png"
 
-import './App.css';
+import './output.css';
 
 class App extends Component {
   constructor(props){
