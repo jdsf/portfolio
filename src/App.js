@@ -62,9 +62,6 @@ class App extends Component {
       height : this.state.header.hover? "3%" : "3%"
     }
 
-    const logoStyle = {
-      fontSize : this.state.header.hover? "1.5vw" : "1.1vw"
-    }
 
     const anchorStyleLeft = {
       animation: this.state.header.hover? "fadeInLeft 1s ease 0s 1 normal"
@@ -93,7 +90,7 @@ class App extends Component {
           <a className = "left-anchor" href = "#about"
              style = {anchorStyleLeft}
           >  ABOUT </a>
-          <h1 style = {logoStyle}> JDSF </h1>
+          <h1> JDSF </h1>
           <a className = "right-anchor" href = "#projects"
              style = {anchorStyleRight}
           > PROJECTS </a>
@@ -172,14 +169,8 @@ class App extends Component {
                 bot = {"0%"}
               >
                   <h2> please enjoy your stay.
-                    <WayWrapper
-                      timeout = {500}
-                      name = "scroll-left"
-                      eyeD = "wrap"
-                    >
-                      <div className = "circle" id = "circle-5">
-                      </div>
-                    </WayWrapper>
+                    <div className = "circle" id = "circle-5">
+                    </div>
                   </h2>
               </WayWrapper>
             </section>
@@ -204,7 +195,7 @@ class App extends Component {
                     name = "scroll-right"
                     timeout = {1000}
                     bot = {'60%'}
-                    top = {'5%'}
+                    top = {'-15%'}
                   >
                     <p id = "first-blurb">
                       <span>
@@ -222,34 +213,12 @@ class App extends Component {
                     top = {'-5%'}
                   >
                   <p id= "second-blurb">
-                    I'm still learning the ropes (about ~5 month experience with
-                    react), here you'll find some of the things I've made during
-                    my trek
+                    I'm still learning the ropes (about ~8 month experience with
+                    front end development), here you'll find some of the things I've made during
+                    my trek showcasing projects using responsive SASS, npm, React, and web APIs
                   </p>
                   </WayWrapper>
-                  <WayWrapper
-                    name = "scroll-right"
-                    timeout = {1000}
-                    bot = {'68%'}
-                    top = {'-10%'}
-                  >
-                    <p id = "third-blurb">
-                        <span>
-                          <strong className = "pop-out">
-                            Some background
-                          </strong>
-                          I have some introductory OOP and statistical/engineering
-                          programming knowledge from school but to be honest I didn't
-                          become personally
-                          invested in the things I played around with until my
-                          last quarter of school,
-                          when I took a web development class! We were strained for time
-                          but still managed to get a flavor for what full stack development
-                          might entail (vanilla js, css, php, sql, apis, json).
-                          Safe to say I was left wanting more!
-                        </span>
-                    </p>
-                  </WayWrapper>
+
                   <WayWrapper
                     name = "scroll-right"
                     timeout = {1000}
@@ -261,10 +230,9 @@ class App extends Component {
                         <strong className = "pop-out">
                           Miscellaneous
                         </strong>
-                        Born in Santa Cruz de la Sierra, Bolivia,
+                        I was born in a
                         a mid-sized landlocked country in the middle of South
-                        America (pop ~12 million) bordering Brazil, Argentina,
-                        Paraguay, Chile and Peru
+                        America with a pop ~12 million
                       </span>
                     </p>
                   </WayWrapper>
@@ -279,10 +247,10 @@ class App extends Component {
                         Though infamous for our third world
                         record-keeping—in fact, birth certificates were not a thing
                         until ~1940 and are still not a thing in parts of the rural
-                        country—a Bolivian, Julia Flores Colque, of Quechua
-                        descent, may be the world oldest
+                        country—a native named Julia Flores Colque of Quechua
+                        descent may be the world oldest
                         person at 118 years of age. <strong>Take that</strong>,
-                        human development index!
+                        low human development index!
                       </span>
                     </p>
                   </WayWrapper>
@@ -294,7 +262,7 @@ class App extends Component {
                   >
                     <p id = "sixth-blurb">
                       <span>
-                        Charitable understanding is an important thing in this world
+                        On an unrelated note, charitable understanding is an important thing in this world
                       </span>
                     </p>
                   </WayWrapper>
@@ -324,7 +292,6 @@ class App extends Component {
               </WayWrapper>
               <WayWrapper
                 name = "scroll-right"
-                eyeD = "projects-greeting"
                 timeout = {1000}
                 bot = {'30%'}
                 top = {'-50%'}

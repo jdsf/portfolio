@@ -64,13 +64,26 @@ body, .App{
     position: absolute;
     width:100vw;
     top: 10px;
-    font-size: 1vw;
+    font-size: 1.5vmax;
+
+    &:hover{
+      font-size: 2vmax;
+      @media only screen and (min-width: 768px){
+        font-size: 1vmax;
+      }
+    }
+
+    @media only screen and (min-width: 768px){
+      font-size: .5vmax;
+    }
 
     h1{
       @extend %tight;
       @extend %transition-1;
       border: 1px solid color(secondary);
     }
+
+
 
     a, h1{
       padding: 5px;
@@ -99,7 +112,8 @@ main{
     width: 3px;
     -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
     border-radius: 10px;
-    background-color: color(secondary); opacity: .1;
+    background-color: color(secondary);
+    opacity: .1;
   }
   &::-webkit-scrollbar-thumb{
     border-radius: 10px;
@@ -119,20 +133,31 @@ section{
   h1{
     color: white;
     padding: 0; margin: 0;
-    font-size: 15vw;
+    font-size: 18vmax;
+    overflow: hidden;
+    @media only screen and (min-width: 768px){
+      font-size:15vmax;
+    }
   }
   h2{
     @extend %tight;
+    display: inline-block;
     background-color: color(primary);
     color: color(secondary);
-    font-size: 5vw; text-align: left;
-    overflow: hidden;
+    font-size: 6vmax; text-align: left;
     z-index: -1000;
+    overflow: hidden;
+    @media only screen and (min-width: 768px){
+      font-size: 4vmax;
+    }
   }
 }
 #greeting-container{
   position: absolute;
-  top: 50px; right: 50px;
+  top: 100px; right: 25px;
+  @media only screen and (min-width: 768px){
+    top:50px;
+  }
 
   h1{
     background-color: color(primary);
@@ -146,14 +171,18 @@ section{
   position: absolute;
   top: 10%;
   border-radius: 100%;
-  height: 15vw; width: 15vw;
+  height: 18vmax; width: 18vmax;
+  @media only screen and (min-width: 768px){
+    height: 15vw; width: 15vw;
+
+  }
 }
 
 .circle-outline{
   position: relative;
   z-index: 1000;
-  top: -100vh; right: -100vh;
-  height: 200vh; width: 200vh;
+  top: -100vmin; right: -100vmin;
+  height: 200vmin; width: 200vmin;
   border: 1px solid color(secondary);
   background-color: none;
   mix-blend-mode: darken;
@@ -168,26 +197,28 @@ section{
 #circle-01-pos, #circle-02-pos,
 #circle-03-pos, #circle-04-pos{
   position: absolute;
+  weight: 100vw; height: 100vh;
+  top: 0px;
 }
 
 #circle-01{
-  top: -95vh; right: -95vh;
-  height: 190vh; width: 190vh;
+  top: -45vmin; right: -45vmin;
+  z-index: 500000;
 }
 
 #circle-02{
-  top: -100vh; right: -100vh;
-  height: 200vh; width: 200vh;
+  top: -45vmin; right: -45vmin;
+  height: 150vh; width: 150vh;
 }
 
 #circle-03{
-  height: 160vh; width: 160vh;
-  top: -80vh; right: -80vh;
+  height: 110vh; width: 110vh;
+  top: -30vmin; right: -30vmin;
 }
 
 #circle-04{
-  top: 0; bottom: -100vh; right: -100vh;
-  height: 200vh; width: 200vh;
+  top: 50vmin;  right: -20vmin;
+  height: 150vh; width: 150vh;
 }
 
 #circle-1{
@@ -212,18 +243,26 @@ section{
 
 
 #second-greeting{
-  z-index: 9999999;
-  position: absolute; left: 10%; bottom: 15%;
-  width: 20%;
+  z-index: 200;
+  position: absolute; left: 12%; bottom: 15%;
+  width: 60%;
+  @media only screen and (min-width: 768px){
+    width: 10%;
+    left: 7%;
+  }
+
 }
 
 #circle-5{
   display: absolute;
-  height: 25vw; width: 25vw;
   left: 2%;
+  height: 25vmax; width: 25vmax;
   background-color: #777706;
   mix-blend-mode: lighten;
   z-index: 1000;
+  @media only screen and (min-width: 768px){
+    height: 25vw; width: 25vw;
+  }
 }
 
 
@@ -231,80 +270,107 @@ section{
   background-color: color(primary);
   h1{
     z-index: -50;
-    font-size: 8vw; color: color(tertiary);
+    font-size: 8vmax; color: color(tertiary);
     background-color: color(primary);
+    @media only screen and (min-width: 768px){
+      font-size: 8vmax;
+    }
   }
 }
 #about-greeting{
-  position: absolute; top: 80px; left: 45px;
+  position: absolute;
+  top: 10px; left: 20px;
   width: 30%;
+  @media only screen and (min-width: 768px){
+  }
 }
 
 #circle-6{
   background-color: #ffff8b;
-  width: 25vw; height: 25vw;
-  left: 15%; top: -25%; z-index: -100;
+  left: -5px; top: -30px;
+  z-index: -100;
+  width: 25vmax; height: 25vmax;
+  @media only screen and (min-width: 768px){
+    width: 25vw; height: 25vw;
+    left: 15%; top: -25%;
+  }
 }
 
 #about-blurb{
-  font-size: 2.2vh;
-  position:absolute;
-  top: 20%; width: 70%; height: 80%; left: 40%;
-
+  font-size: 1.8vmax;
+  position: relative;
+  top: 0; width: 100vw; height: 100vh; left:0;
+  @media only screen and (min-width: 768px){
+    font-size:1.5vmax;
+  }
   p{
     position: absolute;
     width: 70%;
     padding: 10px;
     color: color(secondary);
     border: 1px solid color(secondary);
+    margin: 0;
+
   }
 }
 
 strong.pop-out{
   position: absolute;
-  left: -5%; top: -50%;
+  left: -5%; top: -25px;
   padding: 3px;
   color: color(tertiary);
   background-color: #ebebb9;
-  font-size: 3.7vh;
-}
-
-#first-blurb{
-  @extend %t-left;
-  left: 0%; top: -10%;
-  background-color: beige;
-}
-#second-blurb{
-  @extend %t-right;
-  left: 10%;
-  top: -1%;
-}
-#third-blurb{
-  @extend %t-left;
-  left: -8%; top: 20%;
-  strong.pop-out{
-    top: -35px;
+  font-size: 3.3vmax;
+  @media only screen and (min-width: 768px){
+    font-size: 3.7vh;
   }
 }
 
-#fourth-blurb{
+p#first-blurb{
   @extend %t-left;
-  left: -38%; top: 45%;
+  width: 52%;
+  background-color: color(primary);
+  left: 37%; top: 20%;
+  @media only screen and (min-width: 768px){
+    left: 42%;
+  }
+}
+p#second-blurb{
+  @extend %t-right;
+  width: 80%;
+  left: 5%; top: 30%;
+  @media only screen and (min-width:768px){
+    width: 60%;
+    left: 30%;
+  }
+}
+p#fourth-blurb{
+  @extend %t-left;
+  left: 20%; top: 48%;
   strong.pop-out{
-    top: -35px;
+    top: -25px;
   }
   ul{
     list-style: circle;
   }
+  @media only screen and (min-width: 768px){
+    left: 25%; width: 50%;
+  }
 }
 
-#fifth-blurb{
+p#fifth-blurb{
   @extend %t-left;
-  left: -30%; top: 54%;
+  left: 10%; top: 58%;
+  @media only screen and (min-width: 768px){
+    left: 20%;
+  }
 }
-#sixth-blurb{
+p#sixth-blurb{
   @extend %t-right;
-  left: -20%; top:70%;
+  left: 20%; top:78%;
+  @media only screen and (min-width: 768px){
+    left: 10%; width: 37%;
+  }
 }
 
 #projects{
@@ -313,28 +379,36 @@ strong.pop-out{
 
 #project-circle01{
   position:absolute;
-  top: 0; bottom: -100vh; left: -100vh;
+  top: 0; bottom: -100vmin;
+  left: -100vmin;
 }
 
 #project-circle02{
   position: absolute;
-  top: 0; bottom: -95vh; left: -95vh;
+  top: 5vh; bottom: -95vmin; left: -95vmin;
 }
 
 #projects-greeting{
-  position: absolute; top: 1%; right: 5%;
+  position: absolute;
+  top: 2%; right: 10%;
+  @media only screen and (min-width: 768px){
+    position: absolute; top: -6%; right: 5%;
+  }
   h1{
     @extend %tight;
     position: relative;
     overflow: hidden;
     background-color: color(primary);
-    color: color(tertiary);
-    font-size: 16vw;
+    color: color(secondary);
+    font-size: 23vmin;
+    @media only screen and (min-width: 768px){
+      font-size: 15vmax;
+    }
   }
   div.circle{
     left: 30%; top: -10%;
     background-color: #fb0f0f;
-    width: 25vw; height: 25vw;
+    width: 40vmin; height: 40vmin;
     mix-blend-mode: lighten;
   }
 }
@@ -342,8 +416,14 @@ strong.pop-out{
 #carousel-container{
   position: absolute;
   width: 80%; height: 65%;
-  bottom: 1%; left: 10%; opacity: .8%;
+  bottom: 12%; left: 10%;
+  opacity: .8%;
   z-index: 1600;
+
+  @media only screen and (min-width: 768px){
+    width: 80%; height: 65%;
+    bottom: 10%; left: 10%;
+  }
 
   #dots{
     @extend %flex-row;
@@ -351,13 +431,16 @@ strong.pop-out{
     -ms-flex-pack: justify;
     justify-content: space-between;
     z-index: 100;
-    position: absolute; bottom: 3%; left: 33%;
+    position: absolute; bottom: -30px; left: 35%;
     width: 30%; height: auto;
     div{
       @extend %transition-2;
       border-radius: 100%;
       border: 1px solid color(secondary);
-      width: 1.5vh; height: 1.5vh;
+      width: 1.5vmin; height: 1.5vmin;
+      @media only screen and (min-width: 768px){
+        width: 1.5vh; height: 1.5vh;
+      }
     }
     div.active-dot{
       background-color: color(secondary);
@@ -375,15 +458,21 @@ strong.pop-out{
   position: absolute; width: 100%; height: 100%;
   top: 0;
   background-color: color(secondary);
+  border: 1px solid color(secondary);
 
   a{
     @extend %transition-2;
     position: absolute;
     mix-blend-mode: darken;
     z-index: 9999;
-    top: 45%; left: 45%;
-    text-decoration: none; font-size: 5vh;
+    top: 45%; left: 40%;
+    text-decoration: none; font-size: 8vmin;
     color: color(tertiary);
+    @media only screen and (min-width: 768px){
+      font-size: 5vmin;
+      left:45%;
+    }
+
 
     span{
       padding: 10px;
@@ -394,31 +483,44 @@ strong.pop-out{
 
   #image-container{
     position: relative;
-    height: 80%; width: 100%; margin: auto;
+    height: 95%; width: 100%; margin: auto;
     overflow: hidden;
   }
   img{
     position: absolute;
     top: 0; left: 0;
-    width: 100%; height: auto;
+    width: 1000px; height: auto;
+    margin-left: -250px;
+    @media only screen and (min-width: 768px){
+      margin-left: 0px;
+      width: 100%;
+      min-width: 1200px;
+    }
   }
 
   div.screen{
     @extend %transition-2;
-    opacity: .8; background-color: color(secondary);
+    background-color: color(secondary);
     width: 100%; height: 100%; position: absolute;
     top: 0;
   }
 
   div p{
     @extend %tight;
+    padding: 5px;
     mix-blend-mode: hard-light;
-    color: color(tertiary);
-    background-color: color(secondary);
+    color: color(secondary);
+    background-color: color(primary);
     text-align: left;
     position: absolute;
-    font-size: 2.5vh;
-    top: 60%; left: 2%; width: 30%;
+    font-size: 3.8vmin;
+    border: 1px solid color(secondary);
+    bottom: 10%; left: 10%; width: 80%;
+    @media only screen and (min-width: 768px){
+      top: 60%; left: 2%; width: 30%;
+      font-size: 2.5vmin;
+      height: 20%;
+    }
   }
 }
 
@@ -432,12 +534,16 @@ strong.pop-out{
     right: 15%; top: 10%;
     background-color: color(primary);
     h1{
+      overflow: hidden;
       text-align: center;
       background-color: color(primary);
       width: 100%; height: 100%;
       color: color(tertiary);
-      font-size: 3.5vh;
+      font-size: 8vmin;
       padding: 10%;
+      @media only screen and (min-width: 768px){
+        font-size: 6vmin;
+      }
     }
   }
 }
@@ -458,11 +564,16 @@ strong.pop-out{
 #contact-links{
   position: absolute;
   z-index: 1000;
-  height: auto; width: 10%;
+  height: auto; width: 25vmax;
   border: 1px solid black;
   margin: 0; padding: 20px;
-  top: 45%; left: 45%;
+  top: 55%; left: 30vw;
   list-style: none;
+  @media only screen and (min-width: 768px){
+    width: 12vw;
+    top: 50%;
+    left: 44vw;
+  }
 
   a{
     @extend %flex-row;
@@ -492,7 +603,7 @@ strong.pop-out{
 @keyframes fadeInLeft {
 
   0% {
-    opacity: 0; transform: translateX(225px);
+    opacity: 0; transform: translateX(50%);
   }
   30% {
     opacity: .15;
@@ -505,7 +616,7 @@ strong.pop-out{
 @keyframes fadeInRight {
 
   0% {
-    opacity: 0; transform: translateX(-225px);
+    opacity: 0; transform: translateX(-50%);
   }
   30% {
     opacity: .15;
@@ -514,6 +625,9 @@ strong.pop-out{
     opacity: 1; transform: translateX(0);
   }
 }
+
+
+
 
 @keyframes fadeOut {
   0%{
