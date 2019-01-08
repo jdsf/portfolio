@@ -59,7 +59,7 @@ class App extends Component {
 
   render() {
     const headerStyle = {
-      height : this.state.header.hover? "3%" : "3%"
+      height : this.state.header.hover? "40px" : "40px"
     }
 
 

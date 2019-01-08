@@ -15,12 +15,10 @@ class Carousel extends Component {
     this.state = ({
       images: [zen, notes, nutri],
       blurbs: [
-        "A simple zen styled responsive web page in vanilla js",
-        "Light responsive single page diary app using browser storage"
-        + " and made with react",
-        "A nutrition app that uses FDA food API " +
-         "to search for and show nutrient tallies for user choices, " +
-         "made with react"
+        "Zen styled vanilla carrousel page displaying quotes and info on authors",
+        "Stylized simple webstorage react diary",
+        "Nutrition visualization/planning service " +
+         "using the nutritional FDA API"
       ],
       links: ["https://jdsf.github.io/zen-page/",
               "https://jdsf.github.io/notes-react/",
